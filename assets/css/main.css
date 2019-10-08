@@ -7,6 +7,11 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
+a:link {
+	text-decoration: none;
+  }
+  
+
 html, body, div, span, applet, object,
 iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
 pre, a, abbr, acronym, address, big, cite,
@@ -142,7 +147,7 @@ input, select, textarea {
 		}
 
 		.row > .col-4 {
-			width: 33.33333%;
+			width: 25%;
 		}
 
 		.row > .off-4 {
@@ -1325,11 +1330,11 @@ input, select, textarea {
 		}
 
 	body, input, textarea, select {
-		font-family: 'Source Sans Pro', sans-serif;
+		font-family: Lato, sans-serif, 'Source Sans Pro';
 		font-weight: 300;
-		color: #777777;
+		color: #000000;
 		font-size: 20pt;
-		line-height: 1.75em;
+		line-height: 1.25em;
 	}
 
 		@media screen and (max-width: 1680px) {
