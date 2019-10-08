@@ -7,10 +7,16 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
-a:link {
+a {
+	color: #1772d0;
 	text-decoration: none;
   }
   
+  a:focus,
+  a:hover {
+	color: #f09228;
+	text-decoration: none;
+  }
 
 html, body, div, span, applet, object,
 iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
