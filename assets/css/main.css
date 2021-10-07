@@ -2206,3 +2206,18 @@ input, select, textarea {
 			}
 
 		}
+
+
+/* art */
+.wrapper_scrollbar{
+	/* width: 500px; */
+	overflow-x:scroll;     
+	white-space: nowrap;
+}
+
+.slide{
+	/* background: #ccc; */
+	height: 250px;
+	display: inline-block;
+	width: 200px;
+}
