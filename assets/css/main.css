@@ -2215,6 +2215,20 @@ input, select, textarea {
 		}
 
 
+
+/* to help show scrollbar all the time */
+/* ::-webkit-scrollbar {
+	-webkit-appearance: none;
+	width: .1px;
+	}
+	
+::-webkit-scrollbar-thumb {
+border-radius: .1px;
+background-color: rgba(0, 0, 0, .5);
+box-shadow: 0 0 0px rgba(255, 255, 255, .5);
+} */
+
+
 /* art */
 .wrapper_scrollbar{
 	/* width: 500px; */
