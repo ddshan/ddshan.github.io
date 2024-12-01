@@ -8,15 +8,16 @@
 */
 
 a {
+	/* color: #1772d0; */
 	color: #1772d0;
 	text-decoration: none;
   }
   
   a:focus,
   a:hover {
-	color: #f09228;
+	/* color: #f09228; */
 	/* font-weight:bold; */
-	text-decoration: none;
+	text-decoration: underline;
   }
 
 html, body, div, span, applet, object,
@@ -91,6 +92,7 @@ input, select, textarea {
 		flex-wrap: wrap;
 		box-sizing: border-box;
 		align-items: stretch;
+		margin-left: 0%;
 	}
 
 		.row > * {
@@ -147,6 +149,7 @@ input, select, textarea {
 
 		.row > .col-3 {
 			width: 25%;
+			margin-left: 0;
 		}
 
 		.row > .off-3 {
@@ -155,7 +158,7 @@ input, select, textarea {
 
 		.row > .col-4 {
 			width: 33.3%;
-			text-align: center;
+			text-align: left;
 		}
 
 		.row > .off-4 {
@@ -888,6 +891,7 @@ input, select, textarea {
 				}
 
 				.row > .col-4-medium {
+					/* width: 33.33333%; */
 					width: 33.33333%;
 				}
 
@@ -904,7 +908,7 @@ input, select, textarea {
 				}
 
 				.row > .col-6-medium {
-					width: 50%;
+					width: 100%;
 
 				}
 
@@ -1986,7 +1990,8 @@ input, select, textarea {
 			transition: opacity 0.25s ease-in-out;
 			margin-bottom: 0;
 			position: relative;
-			padding: 2.5em 2.5em 2.5em 2.5em;
+			padding: 2em 2em 2em 2em;
+			/* padding: 1em 1em 1em 1em; */
 			width: 100%;
 		}
 
@@ -2121,7 +2126,7 @@ input, select, textarea {
 
 					#main > .panel.intro header p {
 						letter-spacing: -0.015em;
-						font-size: 1.25em;
+						font-size: 1.0em;
 						margin: 0.25em 0 0 0;
 					}
 
