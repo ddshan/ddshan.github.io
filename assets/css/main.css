@@ -161,6 +161,12 @@ input, select, textarea {
 			text-align: left;
 		}
 
+		.row > .col-4 img {
+			float: left;
+			margin-right: 10px;
+			margin-bottom: 10px;
+		}
+
 		.row > .off-4 {
 			margin-left: 33.33333%;
 		}
@@ -1572,6 +1578,7 @@ input, select, textarea {
 
 	.image {
 		display: inline-block;
+		
 	}
 
 		.image img {
@@ -1601,7 +1608,7 @@ input, select, textarea {
 		}
 
 			.image.centered img {
-				margin: 0 auto;
+				margin: auto auto;
 				width: auto;
 			}
 
