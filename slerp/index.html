@@ -8,31 +8,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Slot-Level Robotic Placement via Visual Imitation from Single Human Video
   </title>
-
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-
-    function gtag() {
-      dataLayer.push(arguments);
-    }
-
-    gtag('js', new Date());
-
-    gtag('config', 'G-PYVRSFMDRL');
-  </script> -->
-
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
   <link rel="stylesheet" href="./static/css/bulma.min.css">
   <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
   <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
   <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
-  <link rel="stylesheet"
-        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="./static/css/index.css">
-  <!-- <link rel="icon" href="./static/images/favicon.svg"> -->
-  <!-- <link rel="icon" href="./static/images/favicon.svg"> -->
   <link rel="icon" href="https://fav.farm/🦾" /> 
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -40,91 +22,146 @@
   <script src="./static/js/bulma-carousel.min.js"></script>
   <script src="./static/js/bulma-slider.min.js"></script>
   <script src="./static/js/index.js"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  <style>
+  
+  .myVideo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 100%;
+  width: auto;
+  transform: translate(-50%, -45%) scale(1.8);
+  transform-origin: center;
+}
+
+  /* Ensure the container has a fixed height */
+  .results-carousel .item2 {
+    position: relative;
+    margin: 5px;
+    overflow: hidden;
+    border-radius: 10px;
+    border: 1px solid #bbb;
+    padding: 0;
+    font-size: 0;
+    height: 330px; 
+  }
+
+  .results-carousel .item {
+    margin: 5px;
+    overflow: hidden;
+    border: 1px solid #bbb;
+    border-radius: 10px;
+    padding: 0;
+    font-size: 0;
+  }
+
+  .results-carousel .item3 {
+    /* position: relative;
+    margin: 5px;
+    overflow: hidden;
+    border-radius: 10px;
+    border: 1px solid #bbb;
+    padding: 0;
+    font-size: 0;
+    width: 400px;  */
+
+    margin: 5px;
+    overflow: hidden;
+    border: 1px solid #bbb;
+    border-radius: 10px;
+    padding: 0;
+    font-size: 0;
+  }
+
+  </style>
 </head>
 <body>
 
 
-<section class="hero">
-  <div class="hero-body">
-    <div class="container is-max-desktop">
-      <div class="columns is-centered">
-        <div class="column has-text-centered">
-          <h3 class="title is-1 publication-title">Slot-Level Robotic Placement<br>via Visual Imitation from Single Human Video
-          </h3>
-          <div class="is-size-5 publication-authors">
-            <span class="author-block">
-              <a href="https://ddshan.github.io/">Dandan Shan</a><sup>1,2*</sup>,</span>
-            <span class="author-block">
-              <a href="https://kaichun-mo.github.io/">Kaichun Mo</a><sup>2&dagger;</sup>,</span>
-            <span class="author-block">
-              <a href="http://wyang.me/">Wei Yang</a><sup>2</sup>,
-            </span>
-            <span class="author-block">
-              <a href="https://scholar.google.com/citations?user=48Y9F-YAAAAJ&hl=en">Yu-Wei Chao</a><sup>2</sup>,
-            </span>
-            <span class="author-block">
-              <a href="https://cs.nyu.edu/~fouhey/">David Fouhey</a><sup>3</sup>,
-            </span>
-            <span class="author-block">
-              <a href="https://homes.cs.washington.edu/~fox/">Dieter Fox</a><sup>1,2</sup>,
-            </span>
-            <span class="author-block">
-              <a href="https://cs.gmu.edu/~amousavi/">Arsalan Mousavian</a><sup>2</sup>
-            </span>
-          </div>
 
-          <div class="is-size-5 publication-authors">
-            <span class="author-block"><sup>1</sup>NVIDIA</span>
-            <span class="author-block"><sup>2</sup>Univsersity of Michigan</span>
-            <span class="author-block"><sup>3</sup>New York University</span>
-          </div>
-
-
-          <div class="is-size-7">
-            <span class="author-block"><sup>*</sup>Work done during internship at Nvidia Research, <sup>&dagger;</sup>Primary mentor</span>
-          </div>
-
-
-
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
           <div class="column has-text-centered">
-            <div class="publication-links">
-              <!-- PDF Link. -->
-              <span class="link-block">
-                <a href="https://arxiv.org/abs/2504.01959"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="fas fa-file-pdf"></i>
-                  </span>
-                  <span>Paper</span>
-                </a>
+            <h3 class="title is-1 publication-title"><u>S</u>lot-<u>Le</u>vel <u>R</u>obotic <u>P</u>lacement<br>via Visual Imitation from Single Human Video
+            </h3>
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">
+                <a href="https://ddshan.github.io/">Dandan Shan</a><sup>1,2*</sup>,</span>
+              <span class="author-block">
+                <a href="https://kaichun-mo.github.io/">Kaichun Mo</a><sup>2&dagger;</sup>,</span>
+              <span class="author-block">
+                <a href="http://wyang.me/">Wei Yang</a><sup>2</sup>,
               </span>
-              <span class="link-block">
-                <a href=""
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="fab fa-github"></i>
-                  </span>
-                  <span>Code (coming soon)</span>
-                  </a>
+              <span class="author-block">
+                <a href="https://scholar.google.com/citations?user=48Y9F-YAAAAJ&hl=en">Yu-Wei Chao</a><sup>2</sup>,
               </span>
-              <!-- Dataset Link. -->
-              <!-- <span class="link-block">
-                <a href="https://github.com/google/nerfies/releases/tag/0.1"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="far fa-images"></i>
-                  </span>
-                  <span>Data</span>
-                  </a>
-              </span> -->
+              <span class="author-block">
+                <a href="https://cs.nyu.edu/~fouhey/">David Fouhey</a><sup>3</sup>,
+              </span>
+              <span class="author-block">
+                <a href="https://homes.cs.washington.edu/~fox/">Dieter Fox</a><sup>1,2</sup>,
+              </span>
+              <span class="author-block">
+                <a href="https://cs.gmu.edu/~amousavi/">Arsalan Mousavian</a><sup>2</sup>
+              </span>
             </div>
-
+  
+            <div class="is-size-5 publication-authors">
+              <span class="author-block"><sup>1</sup>NVIDIA</span>
+              <span class="author-block"><sup>2</sup>Univsersity of Michigan</span>
+              <span class="author-block"><sup>3</sup>New York University</span>
+            </div>
+  
+  
+            <div class="is-size-7">
+              <span class="author-block"><sup>*</sup>Work done during internship at Nvidia Research, <sup>&dagger;</sup>Primary mentor</span>
+            </div>
+  
+  
+  
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                <!-- PDF Link. -->
+                <span class="link-block">
+                  <a href="https://arxiv.org/abs/2504.01959"
+                     class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                        <i class="fas fa-file-pdf"></i>
+                    </span>
+                    <span>Paper</span>
+                  </a>
+                </span>
+                <span class="link-block">
+                  <a href=""
+                     class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                        <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code (coming soon)</span>
+                    </a>
+                </span>
+                <!-- Dataset Link. -->
+                <!-- <span class="link-block">
+                  <a href="https://github.com/google/nerfies/releases/tag/0.1"
+                     class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                        <i class="far fa-images"></i>
+                    </span>
+                    <span>Data</span>
+                    </a>
+                </span> -->
+              </div>
+  
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
 
 
@@ -149,69 +186,14 @@
 
 
 
-<!-- <section class="hero is-light is-small">
-  <div class="hero-body">
-    <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-steve">
-          <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/steve.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-chair-tp">
-          <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/chair-tp.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-shiba">
-          <video poster="" id="shiba" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/shiba.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-fullbody">
-          <video poster="" id="fullbody" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/fullbody.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-blueshirt">
-          <video poster="" id="blueshirt" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/blueshirt.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-mask">
-          <video poster="" id="mask" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/mask.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-coffee">
-          <video poster="" id="coffee" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/coffee.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-toby">
-          <video poster="" id="toby" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/toby2.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-      </div>
-    </div>
-  </div>
-</section> -->
 
 
 <section class="section">
   <div class="container is-max-desktop">
     <!-- Abstract. -->
     <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
+      <!-- <div class="column is-four-fifths"> -->
+        <div class="column is-full-width">
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
@@ -252,25 +234,50 @@
 
     <!-- Animation. -->
     <div class="columns is-centered  has-text-centered">
-      <!-- <div class="column is-full-width"> -->
-        <div class="column is-four-fifths">
-        <h2 class="title is-3">SLeRP System</h2>
+      <div class="column is-full-width">
+        <!-- <div class="column is-four-fifths"> -->
+        <h2 class="title is-3">SLeRP System Overview</h2>
+        <br>
 
         <!-- Interpolating. -->
-        <h3 class="title is-4">Parse human videos</h3>
+        <!-- <h3 class="title is-4">Overview</h3> -->
+        <img style="align-items: center;" src="./assets/overview.png">
         <div class="content has-text-justified">
           <p>
-            We can also animate the scene by interpolating the deformation latent codes of two input
-            frames. Use the slider here to linearly interpolate between the left frame and the right
-            frame.
+            <b>System overview.</b> SLeRP begins by analyzing the input human video, tracking the <font color="#ffc20a">object</font> throughout the sequence 
+            and identifying the placement <font color="red">slot</font>. 
+            Next, we re-identify the object and the slot in the robot's view by correlating the human-view and robot-view images. 
+            Using depth images, we reconstruct the observations in 3D and compute a single 6-DoF object transformation \(T\) in the robot's view, enabling the robot to transfer the object into the slot. 
+            If more than one slot is present, we detect all applicable slots and compute one 6-DoF object transformation for each slot. 
+            Finally, such 6-DoF object transformations are sent to the downstream robot planning and control pipeline for real robot pick-and-place execution.
           </p>
+          <h3 class="title is-4">Step 1: parse the human video</h3>
         </div>
-       
-        <br/>
-        <!--/ Interpolating. -->
 
-        <!-- Re-rendering. -->
-        <h3 class="title is-4">Re-rendering the input video</h3>
+
+        
+        <div>
+          <img style="align-items: center; width: 50%;" src="./assets/parse_human.png">
+          <div class="content has-text-justified">
+            <p>
+              <!-- <b>Parse Human Video.</b>  -->
+              Given the input human video (bottom), we run state-of-the-art hand-object detector and tracker to obtain the pick <font color="#ffc20a">object</font> mask and train a novel network SlotNet to identify the <font color="red">slot</font> mask.
+            </p>
+            <h3 class="title is-4">Step 2: correlate with robot view</h3>
+        </div>
+
+        <div>
+          <img style="align-items: center;" src="./assets/correlate_robot.png">
+          <div class="content has-text-justified">
+            <p>
+              <!-- <b>Parse Human Video.</b>  -->
+              Given the <font color="#ffc20a">object</font> and <font color="red">slot</font> mask detected in the human video, we first re-identify the corresponding object and slot in robot view, 
+              and also find all similar empty slots. With corresponding object masks and slot masks, we first compute 2D keypoint matching among the detected object and mask local patches and then lift the observations to 3D to compute 6-DoF transforms.
+            </p>
+            <!-- <h3 class="title is-4">Step 3: correlate with robot view</h3> -->
+        </div>
+      
+        <!-- <h3 class="title is-4">Re-rendering the input video</h3>
         <div class="content has-text-justified">
           <p>
             Using <span class="dnerf">Nerfies</span>, you can re-render a video from a novel
@@ -287,13 +294,267 @@
             <source src="./static/videos/replay.mp4"
                     type="video/mp4">
           </video>
-        </div>
-       
+        </div> -->
 
       </div>
     </div>
   </div>
 </section>
+
+
+
+
+<!-- results -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered  has-text-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Experiment Results</h2>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+
+
+    <!-- Animation. -->
+    <div class="columns is-centered  has-text-centered">
+      <div class="column is-full-width">
+        <img style="align-items: center;" src="./assets/vp_compare.png">
+        
+        <div class="content has-text-justified">
+          <p>
+            <b>Qualitative comparison.</b> We compare our method to baselines and present side-by-side results on three examples. 
+            For each example, the first column shows the input human video at the top and robot-view image in the bottom. 
+            The top row displays 2D <font color="#ffc20a">object</font> and <font color="red">slot</font> re-identification results, while the bottom row shows 6-DoF relative pose predictions by projecting the object point cloud onto the slots. 
+            Unlike the baselines that can only predict one exact slot, our approach can also identify multiple slots. 
+            These results clearly demonstrate that our system outperforms the baselines, achieving accurate slot and transformation predictions.
+            
+          </p>
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="hero is-light is-small">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title is-4">Demos on tracking <font color="blue">hands</font>, <font color="#ffc20a">objects</font> and <font color="red">slots</font></h2>
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item item-steve">
+          <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/human_videos/o0-b2-s1-v0__pickobj.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-chair-tp">
+          <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/human_videos/o0-b3-s1-v0__pickobj.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-shiba">
+          <video poster="" id="shiba" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/human_videos/o2-b0-s0-v1__pickobj.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-fullbody">
+          <video poster="" id="fullbody" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/human_videos/o2-b3-s2-v0__pickobj.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-blueshirt">
+          <video poster="" id="blueshirt" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/human_videos/o4-b1-s2-v0__pickobj.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-mask">
+          <video poster="" id="mask" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/human_videos/o4-b3-s0-v1__pickobj.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-coffee">
+          <video poster="" id="coffee" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/human_videos/o6-b3-s1-v0__pickobj.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-toby">
+          <video poster="" id="toby" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/human_videos/o8-b0-s2-v1__pickobj.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-toby">
+          <video poster="" id="toby" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/human_videos/o9-b0-s3-v1__pickobj.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-toby">
+          <video poster="" id="toby" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/human_videos/o10-b1-s1-v1__pickobj.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-toby">
+          <video poster="" id="toby" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/human_videos/o11-b1-s3-v1__pickobj.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-toby">
+          <video poster="" id="toby" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/human_videos/o12-b1-s0-v0__pickobj.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="hero is-light is-small">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title is-4">Demos on transforming objects onto slots</h2>
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item2 item-steve">
+          <video poster="" class="myVideo" autoplay controls muted loop playsinline>
+            <source src="./static/transform_videos/o0-b1-s1-v0__o0-b1-s1-v1.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item2 item-chair-tp">
+          <video poster="" class="myVideo" autoplay controls muted loop playsinline>
+            <source src="./static/transform_videos/o0-b2-s3-v0__o0-b3-s3-v0.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item2 item-shiba">
+          <video poster="" class="myVideo" autoplay controls muted loop playsinline>
+            <source src="./static/transform_videos/o2-b0-s3-v0__o2-b0-s1-v0.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item2 item-fullbody">
+          <video poster="" class="myVideo" autoplay controls muted loop playsinline>
+            <source src="./static/transform_videos/o2-b3-s1-v1__o2-b3-s3-v1.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item2 item-blueshirt">
+          <video poster="" class="myVideo" autoplay controls muted loop playsinline>
+            <source src="./static/transform_videos/o4-b0-s0-v1__o4-b0-s2-v1.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item2 item-mask">
+          <video poster="" class="myVideo" autoplay controls muted loop playsinline>
+            <source src="./static/transform_videos/o4-b3-s0-v0__o4-b3-s0-v1.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item2 item-coffee">
+          <video poster="" class="myVideo" autoplay controls muted loop playsinline>
+            <source src="./static/transform_videos/o6-b0-s1-v0__o6-b0-s3-v0.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item2 item-toby">
+          <video poster="" class="myVideo" autoplay controls muted loop playsinline>
+            <source src="./static/transform_videos/o8-b3-s3-v0__o8-b0-s3-v0.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item2 item-toby">
+          <video poster="" class="myVideo" autoplay controls muted loop playsinline>
+            <source src="./static/transform_videos/o9-b1-s2-v0__o9-b3-s2-v0.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item2 item-toby">
+          <video poster="" class="myVideo" autoplay controls muted loop playsinline>
+            <source src="./static/transform_videos/o10-b2-s3-v1__o10-b2-s3-v0.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item2 item-toby">
+          <video poster="" class="myVideo" autoplay controls muted loop playsinline>
+            <source src="./static/transform_videos/o11-b0-s0-v0__o11-b3-s0-v0.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item2 item-toby">
+          <video poster="" class="myVideo" autoplay controls muted loop playsinline>
+            <source src="./static/transform_videos/o12-b2-s0-v0__o12-b1-s0-v0.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+<section class="hero is-light is-small">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title is-4">Demos on real robot execution</h2>
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item3 item-steve">
+          <video poster="" id="steve" autoplay controls muted loop playsinline height="150%">
+            <source src="./static/robot_demos/teaser_video_muffin_matt_tray_slowed.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item3 item-chair-tp">
+          <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="150%">
+            <source src="./static/robot_demos/slerp__muffin_in_muffin_tray.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item3 item-shiba">
+          <video poster="" id="shiba" autoplay controls muted loop playsinline height="150%">
+            <source src="./static/robot_demos/slerp__block_in_organizer.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item3 item-fullbody">
+          <video poster="" id="fullbody" autoplay controls muted loop playsinline height="150%">
+            <source src="./static/robot_demos/slerp__egg_in_egg_carton.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item3 item-blueshirt">
+          <video poster="" id="blueshirt" autoplay controls muted loop playsinline height="150%">
+            <source src="./static/robot_demos/slerp__strawberry_in_organizer.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
 
 
 
